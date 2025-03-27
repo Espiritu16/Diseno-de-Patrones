@@ -20,5 +20,6 @@ public class MainResiduosGenerales {
         rr1.setEstado(JOptionPane.showInputDialog("Ingrese el estado del residuo: "));
         //Llamamos a uno de los metodos
         rr1.mostrarResiduos();
+        
     }
 }
