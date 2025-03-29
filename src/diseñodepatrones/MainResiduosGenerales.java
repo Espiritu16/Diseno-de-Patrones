@@ -21,5 +21,7 @@ public class MainResiduosGenerales {
         //Llamamos a los metodos
         rr1.CrearResultados();
         
+        
+        
     }
 }
