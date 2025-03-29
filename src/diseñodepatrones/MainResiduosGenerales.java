@@ -12,14 +12,14 @@ import javax.swing.JOptionPane;
  */
 public class MainResiduosGenerales {
     public static void main(String[] args) {
-        //Creamos objeto
         RegistroResiduo rr1= new RegistroResiduo();
-        //Rellenamos los datos
         rr1.setUsuario(JOptionPane.showInputDialog("Ingrese su usuario: "));
         rr1.setPeso(Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso del residuo: ")));
         rr1.setEstado(JOptionPane.showInputDialog("Ingrese el estado del residuo: "));
-        //Llamamos a uno de los metodos
-        rr1.mostrarResiduos();
+        rr1.setNombreResiduo(JOptionPane.showInputDialog("Ingrese el nombre del residuo"));
+        rr1.setTipo(JOptionPane.showInputDialog("Ingrese el tipo del residuo"));
+        //Llamamos a los metodos
+        rr1.CrearResultados();
         
     }
 }

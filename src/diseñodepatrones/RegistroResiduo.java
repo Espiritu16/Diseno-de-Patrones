@@ -2,8 +2,9 @@ package diseñodepatrones;
 import javax.swing.JOptionPane;
 
 
-public class RegistroResiduo implements AccionesGenerales {
+public class RegistroResiduo implements ResumenResiduo {
     
+    public String nombreResiduo;
     public String usuario;
     public String ubicacion;
     public String estado;
@@ -11,7 +12,8 @@ public class RegistroResiduo implements AccionesGenerales {
     public String tipo;
     public double peso;
 
-    public RegistroResiduo(String usuario, String ubicacion, String estado, String metodoRecomendado, String tipo, double peso) {
+    public RegistroResiduo(String nombreResiduo, String usuario, String ubicacion, String estado, String metodoRecomendado, String tipo, double peso) {
+        this.nombreResiduo= nombreResiduo;
         this.usuario = usuario;
         this.ubicacion = ubicacion;
         this.estado = estado;
@@ -23,7 +25,14 @@ public class RegistroResiduo implements AccionesGenerales {
         
     }
     //Getter and setters
+    
+    public String getNombreResiduo() {
+        return nombreResiduo;
+    }
 
+    public void setNombreResiduo(String nombreResiduo) {
+        this.nombreResiduo = nombreResiduo;
+    }
     public String getUsuario() {
         return usuario;
     }
@@ -72,37 +81,24 @@ public class RegistroResiduo implements AccionesGenerales {
         this.peso = peso;
     }
     
+    
     @Override
-    public void mostrarResiduos(){
-        System.out.println("=== Información del Residuo ===");
-        System.out.println("Usuario: " + usuario);
-        System.out.println("Peso: " + String.format("%.2f", peso) + " kg");
-        System.out.println("Estado: " + estado);
-        System.out.println("===============================");
+    public void CrearResultados() {
+        String mensaje1 = "=== Información del Residuo ===\n" +
+                         "Usuario: " + getUsuario() + "\n" +
+                         "Nombre de residuo: "+getNombreResiduo() + "\n" + 
+                         "Peso: " + String.format("%.2f", getPeso()) + " kg\n" +
+                         "Estado: " + getEstado() + "\n" +
+                         "Tipo: " + getTipo() + "\n" +
+                         "===============================";
+        JOptionPane.showMessageDialog(null, mensaje1, "Información del Residuo", JOptionPane.INFORMATION_MESSAGE);
     }
     
-    /*@Override
-    public void ingresarDatos(){
-        usuario=JOptionPane.showInputDialog("Ingrese su usuario");
-        tipo=JOptionPane.showInputDialog("Ingrese el tipo de residuo");
-        peso=Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de su residuo"));
-    } */
-
-    @Override
-    public void mostrarSugerencia() {
-        
-    }
-
-    @Override
-    public void mostrarInformacion() {
-       
-    }
-
-    @Override
-    public void mostrarEstadisticas() {
-
-    }
     
+    
+    
+    
+
     
    
 }
