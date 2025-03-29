@@ -21,7 +21,7 @@ public class MainResiduosGenerales {
         //Llamamos a uno de los metodos
         rr1.mostrarResiduos();
         
-        System.out.println("Hola ya se hacer un commit");
+        
         
     }
 }
