@@ -20,6 +20,8 @@ public class MainResiduosGenerales {
         rr1.setTipo(JOptionPane.showInputDialog("Ingrese el tipo del residuo"));
         //Llamamos a los metodos
         rr1.CrearResultados();
+
+        System.out.println("Hola KEVIN");
         
         
         
