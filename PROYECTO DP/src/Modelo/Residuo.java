@@ -49,13 +49,7 @@ public class Residuo implements ResumenResiduo,IngresarDatos {
         this.estado = estado;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
+ 
 
     public double getPeso() {
         return peso;
@@ -72,7 +66,6 @@ public class Residuo implements ResumenResiduo,IngresarDatos {
                          "Nombre de residuo: "+getNombreResiduo() + "\n" + 
                          "Peso: " + String.format("%.2f", getPeso()) + " kg\n" +
                          "Estado: " + getEstado() + "\n" +
-                         "Tipo: " + getTipo() + "\n" +
                          "===============================";
         JOptionPane.showMessageDialog(null, mensaje1, "Información del Residuo", JOptionPane.INFORMATION_MESSAGE);
     }
@@ -83,16 +76,10 @@ public class Residuo implements ResumenResiduo,IngresarDatos {
             setNombreResiduo(nombreResiduo);
             setPeso(peso);
             setEstado(estado);
-            setTipo(tipo);
         } catch (Exception e) {
         }
     }
     
-    
-    
-    
-    
-
-    
+   
    
 }

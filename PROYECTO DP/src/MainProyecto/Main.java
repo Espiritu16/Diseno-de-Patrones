@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package MainProyecto;
-
-import Modelo.Residuo;
 import Modelo.Usuario;
 
 /**
@@ -16,6 +14,6 @@ public class Main {
         Usuario u1 = new Usuario();
         //Llamamos metodos
         u1.ingresarDatos();
-        u1.mostrarDatosUsuario();
+        u1.mostrarDatos();
     }
 }
