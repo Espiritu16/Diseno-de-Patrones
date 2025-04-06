@@ -18,11 +18,10 @@ public class Sugerencia implements MostrarInformacion{
 
 
     @Override
-    public String mostrarDatos() {
+    public void mostrarDatos() {
        String mensaje = "Título: " + titulo + "\n"
                    + "Descripción: " + descripcion + "\n";
     
-    return mensaje;
 }
     
     

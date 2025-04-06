@@ -42,13 +42,13 @@ public class Usuario implements MostrarInformacion, IngresarDatos {
     
     
     @Override
-    public String mostrarDatos() {
+    public void mostrarDatos() {
         String mensaje = "ID Usuario: " + getIdUsuario() + "\n"
                        + "Nombre: " + getNombre() + "\n"
                        + "Correo: " + getCorreo() + "\n"
                        + "Dirección: " + getDireccion() + "\n";
-                      
-        return mensaje;
+             JOptionPane.showMessageDialog(null, mensaje, "Información del Residuo", JOptionPane.INFORMATION_MESSAGE);         
+        
     }
 
     

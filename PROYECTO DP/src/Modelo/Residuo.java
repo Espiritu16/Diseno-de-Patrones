@@ -3,11 +3,11 @@ package Modelo;
 
 
 import InterfacesMetodos.IngresarDatos;
-import InterfacesMetodos.ResumenResiduo;
+import InterfacesMetodos.MostrarInformacion;
 import javax.swing.JOptionPane;
 
 
-public class Residuo implements ResumenResiduo,IngresarDatos {
+public class Residuo implements MostrarInformacion,IngresarDatos {
     
     public String nombreResiduo;
     public String estado;  //Sólidos, Semisólidos, Líquidos, Gaseosos
@@ -59,9 +59,20 @@ public class Residuo implements ResumenResiduo,IngresarDatos {
         this.peso = peso;
     }
     
+    @Override
+    public void ingresarDatos() {
+        try {
+            setNombreResiduo(JOptionPane.showInputDialog("Ingrese el nombre del residuo:"));
+            setPeso(Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso del residuo: ")));
+            setEstado(JOptionPane.showInputDialog("Ingrese el estado del residuo:"));
+        } catch (Exception e) {
+            JOptionPane.showInputDialog(null,"Error: DEBE INGRESAR UN RESIDUO AL MENOS","ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     
     @Override
-    public void CrearResultados() {
+    public void mostrarDatos() {
         String mensaje1 = "=== Información del Residuo ===\n" +
                          "Nombre de residuo: "+getNombreResiduo() + "\n" + 
                          "Peso: " + String.format("%.2f", getPeso()) + " kg\n" +
@@ -70,15 +81,6 @@ public class Residuo implements ResumenResiduo,IngresarDatos {
         JOptionPane.showMessageDialog(null, mensaje1, "Información del Residuo", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    @Override
-    public void ingresarDatos() {
-        try {
-            setNombreResiduo(nombreResiduo);
-            setPeso(peso);
-            setEstado(estado);
-        } catch (Exception e) {
-        }
-    }
     
    
    
