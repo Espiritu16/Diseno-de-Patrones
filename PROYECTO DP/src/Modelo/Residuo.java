@@ -25,7 +25,6 @@ public class Residuo implements MostrarInformacion,IngresarDatos {
         this.estado = estado;
         this.peso = peso;
     }
-
     
     public Residuo(){
         
