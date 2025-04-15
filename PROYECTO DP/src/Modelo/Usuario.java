@@ -24,9 +24,6 @@ public class Usuario implements MostrarInformacion, IngresarDatos {
         
     }
 
-
- 
-    
     //METODOS
     @Override
     public void ingresarDatos() {

@@ -29,13 +29,14 @@ public class Main {
         r1.mostrarDatos();
         //Notificaciones
         Notificacion n1= new Notificacion();
-        n1.avisoGeneral();
+        n1.Notificador();
         NotiEMAIL ne= new NotiEMAIL();
         ne.Notificador();
         NotiMSG nm= new NotiMSG();
         nm.Notificador();
         NotiWhatsAPP nw= new NotiWhatsAPP();
         nw.Notificador();
+        
         //Sugerencias
         GeneradorSugerencia sugerenciaBasica = new SugerenciaBasica();
         Sugerencia sugerencia1 = new Sugerencia(sugerenciaBasica);

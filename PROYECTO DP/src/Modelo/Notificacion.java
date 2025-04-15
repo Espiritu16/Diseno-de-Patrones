@@ -4,7 +4,7 @@ import InterfacesMetodos.EnviarNotificacion;
 import java.time.LocalDateTime;
 
 //CLASE PADRE DE NOTIFIACIONES
-public class Notificacion {
+public class Notificacion implements EnviarNotificacion{
     private static int contadorID=1;
     private int idNotificacion;
     private LocalDateTime fechaEnvio;
@@ -19,13 +19,14 @@ public class Notificacion {
 
     public Notificacion() {
     }
-    public String avisoGeneral(){
+    
+    @Override
+    public String Notificador(){
         String mensaje = "\"¡Recordatorio! Mañana es el día de recolección de tus residuos.\"";
     
         // Mostrar el mensaje en un cuadro de diálogo
         JOptionPane.showMessageDialog(null, mensaje, "Notificación", JOptionPane.INFORMATION_MESSAGE);
 
         return mensaje; 
-    }
-    
+    } 
 }
